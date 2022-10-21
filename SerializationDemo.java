@@ -11,7 +11,7 @@ public class SerializationDemo {
 		Cat cat=new Cat(12,"white");
 		try {
 			ObjectOutputStream  oos=new ObjectOutputStream(new FileOutputStream("file.txt"));
-			oos.writeObject(cat);
+			oos.writeObject(cat);//java.io.NotSerializableException: Cat at SerializationDemo.main(SerializationDemo.java:14)
 			System.out.println("object written successfully");
 			
 			ObjectInputStream  ois=new ObjectInputStream(new FileInputStream("file.txt"));
@@ -31,7 +31,7 @@ public class SerializationDemo {
 		
 	}
 }
-class Cat  implements Serializable{
+class Cat  /*implements Serializable*/{
 	int whiskerLength;
 	String furColor;
 	
