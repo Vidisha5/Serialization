@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 public class SerliazationDemo78 {
 
-	public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
+	public static void main(String[] args) throws IOException, ClassNotFoundException {
 		Collar c=new Collar(10);
 		Dog1 d=new Dog1(c,"white");
 		ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream("file.txt"));
